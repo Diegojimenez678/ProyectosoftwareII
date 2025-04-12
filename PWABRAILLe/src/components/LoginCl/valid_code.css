@@ -1,0 +1,35 @@
+.code-inputs {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between;
+    margin-bottom: 16px;
+    width: 100%; 
+}
+
+.code-input {
+    flex: 1; 
+    max-width: 50px; 
+    min-width: 30px; 
+    margin: 0 1px;
+    padding: 1rem;
+    border: 0.1rem solid #ccc;
+    border-radius: 0.5rem;
+    text-align: center;
+    font-size: 1.5rem;
+    box-sizing: border-box;       
+}
+
+.reset-password-formvalid {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width: 600px) {
+    .code-inputs {
+        flex-wrap: wrap;  
+    }
+    .code-input {
+        width: 2%;  
+        margin-bottom: 1px;
+    }
+}

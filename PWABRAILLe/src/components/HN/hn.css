@@ -1,0 +1,230 @@
+.contenedor-productos {
+    padding: 5rem;
+}
+
+.input-search {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    width: 100%;
+    max-width: 300px;
+}
+
+.input-search::placeholder {
+    color: #999;
+}
+
+.tablaProducto {
+    
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.tablaProducto th {
+    border-bottom: 0.2rem solid #545454;
+    padding: 1rem;
+}
+
+
+.tablaProducto td {
+    border-bottom: 0.2rem solid #ececec;
+    padding: 0.6rem;
+    text-align: center;
+}
+
+
+.tablaProducto th {
+    background-color: #f2f2f2;
+}
+
+.tablaProducto tr:hover {
+    background-color: #f5f5f5;
+}
+
+.foto-cell img {
+    display: block;
+    margin: 0 auto;
+}
+
+.button-circle-green {
+    border-radius: 30%;
+    border: none;
+    background-color: #00cc00;
+    padding: 0.6rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.button-circle-green:hover {
+    background-color: #00e600;
+}
+
+.button-circle-red {
+    border-radius: 30%;
+    border: none;
+    background-color: #ff2825;
+    padding: 0.6rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.button-circle-red:hover {
+    background-color: #ff4238;
+}
+
+.button-edit {
+    background-color: #000000;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+.button-edit:hover {
+    background-color: #222222;
+}
+
+.pagination {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.page-link {
+    color: #000000;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.page-link:hover {
+    background-color: #f8f9fa;
+}
+
+.page-item:first-child .page-link {
+    margin-left: 0;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+.page-item:last-child .page-link {
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.page-item.active .page-link {
+    z-index: 1;
+    color: #fff;
+    background-color: #000000;
+    border-color: #000000;
+}
+
+.page-item.disabled .page-link {
+    color: #6c757d;
+    pointer-events: none;
+    cursor: auto;
+    background-color: #fff;
+    border-color: #dee2e6;
+}
+
+.header-product {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;    
+    margin-bottom: 2rem;
+}
+
+
+.product-button{
+    padding: 10px 20px;
+    background-color: #1f481f;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.product-button:hover {
+    background-color: #1e1e1e;
+}
+.aVolver{
+    position: absolute;
+    margin: 0.5rem;    
+    padding: 1rem 2rem;    
+    background-color: #000000;
+    color: white;
+    text-decoration: none;
+    font-size: 1.5em;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: background-color 0.3s; 
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.input-search {
+    padding: 8px 12px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    flex: 1;
+    margin-right: 10px;
+    width: 200px; 
+    box-sizing: border-box; 
+}
+
+.clear-button {
+    background-color: #f0f0f0; 
+    border: 1px solid #ccc; 
+    border-radius: 4px;
+    padding: 6px; 
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.clear-button svg {
+    width: 16px;
+    height: 16px;
+    stroke-width: 2;
+    stroke: #555;
+    fill: none;
+    margin-right: 4px;
+}
+
+.clear-button:hover {
+    background-color: #e0e0e0; 
+}
+
+.clear-button:focus {
+    outline: none;
+}
+
+.clear-button span {
+    font-size: 14px;
+    color: #555;
+}

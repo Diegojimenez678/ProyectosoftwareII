@@ -1,0 +1,201 @@
+.modal-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    max-width: 500px;
+    width: 90%;
+
+}
+
+
+
+
+.preguntas>div {
+    display: inline-block;
+    width: 28%;
+    padding: 0.4rem;
+}
+
+.preguntas p {
+    margin-left: 0.8rem;
+}
+
+.form-label {
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+.form-checkbox {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+}
+
+
+
+
+.language {
+    font-size: 1.1rem;
+    margin: 2rem;
+    font-weight: bold;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.en {
+    padding-top: 0.5rem;
+    color: #49f946;
+}
+
+.es {
+    padding-top: 0.5rem;
+    color: #ff0000;
+}
+
+.check {
+    position: relative;
+    width: 5rem;
+    height: 2.2rem;
+}
+
+.check:before {
+    content: '';
+    align-items: center;
+    position: absolute;
+    width: 5rem;
+    height: 2.5rem;
+    background: #49f946;
+    border-radius: 2.5rem;
+}
+
+.check:after {
+    content: '';
+    position: absolute;
+    width: 2.5rem;
+    height: 2.5rem;
+    background: #fff;
+    border-radius: 2.5rem;
+    transition: 0.25s;
+    border: 0.2rem solid #49f946;
+    box-sizing: border-box;
+}
+
+.check:checked:after {
+    left: 2.5rem;
+    border: 0.2rem solid #ff0000;
+}
+
+.check:checked:before {
+    background: #ff0000;
+}
+
+
+.form-button {
+    background-color: #000000;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.form-button:hover {
+    background-color: rgb(65, 65, 65);
+}
+
+.close-modal-button {
+    background-color: #f44336;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.close-modal-button:hover {
+    background-color: #e53935;
+}
+
+.recogida-data,
+.recogida-materiales {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+    justify-content: center;
+}
+
+.recogida-data p {
+    margin: 0.5rem 2rem;
+    font-size: 1.6rem;
+
+}
+
+.recogida-materiales p {
+    margin: 1rem 0rem;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2rem;
+}
+
+.recogida-data strong,
+.recogida-materiales strong {
+    font-weight: bold;
+}
+
+.recogida-materiales {
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.container-details {
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+}
+
+
+.preguntas {
+    margin: 0rem 6rem;
+}
+
+.row1-fecha {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.time-container {
+    flex: 1;
+    margin: 1rem 0;
+}
+
+.time-details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.form-label {
+    margin: 1px 0;
+}

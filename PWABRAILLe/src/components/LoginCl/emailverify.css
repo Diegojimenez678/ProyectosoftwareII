@@ -1,0 +1,47 @@
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+
+}
+
+.forgot-password-container {
+       
+    margin: 3rem;
+    padding: 2rem;
+    border: 0.1rem solid #ccc;
+    border-radius: 1rem;
+    background-color: #f9f9f900;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+
+.reset-password-title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.reset-password-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-label {
+    margin-bottom: 8px;
+}
+
+.reset-button {
+    padding: 10px 20px;
+    background-color: #000000;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.reset-button:hover {
+    background-color:#111111;
+}
+

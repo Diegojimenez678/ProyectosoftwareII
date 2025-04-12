@@ -1,0 +1,151 @@
+html{
+  font-size: 62.5%;
+
+}
+
+.root-home {  
+  background-position: center; 
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 160vw 100vh;
+}
+
+
+
+*{
+  box-sizing: border-box;
+  margin: 0;  
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+ 
+}
+
+.headerLayout {
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  justify-content: space-between;
+  border-bottom: 0.2rem solid #a0a0a0;
+  width: 100%;
+  padding: 1.2rem 2.2rem;
+
+}
+
+
+.nav{ 
+        
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.ulLayout {
+  padding: 2.5rem;
+  display: flex;  
+  flex-wrap: wrap;
+  align-items: center;      
+  justify-content: center;
+  list-style: none; 
+  margin-bottom: 0;
+}
+
+.liLayout {  
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 4rem;
+    padding: 0 2.5rem;
+}
+
+.aLayout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 15rem 2rem;    
+  background-color: #000000;
+  color: white;
+  text-decoration: none;
+  font-size: 1.5em;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+}
+
+.aLayout:hover {
+  background-color: #253c55;
+}
+
+@media screen and (max-width: 900px) {
+  .ulLayout {
+    
+    padding: 1rem; 
+  }
+
+  .liLayout {
+    line-height: 2.5rem; 
+    margin: 2rem;
+    padding: 0 1rem; 
+  }
+
+  .aLayout {
+    padding: 3rem; 
+    font-size: 1.2em;
+  }
+}
+
+
+.buttonLayout {
+  background-color: #000000;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 1rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.loginButton {
+  cursor: pointer;
+  padding: 0.9rem 1.2rem;
+  background-color: #000000;
+  color: #2c3e50;
+  border: 0.3rem solid#000000; 
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.loginButton:hover {
+  background-color: #0c0c0c; 
+}
+
+
+.LoadingModal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.LoadingSpinner {
+  border: 1rem solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top: 1rem solid #ffffff;
+  width: 15rem;
+  height: 15rem;
+  animation: spin 1s linear infinite;
+}
