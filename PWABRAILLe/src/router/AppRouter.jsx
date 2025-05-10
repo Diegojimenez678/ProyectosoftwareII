@@ -7,7 +7,8 @@ import Expiracontra from "../utils/expiraCode";
 export const AppRouter = () => {
   return (
     <Routes>
-      <Route path="/" element={<LoginCli />}/>
+      {/* <Route path="/" element={<LoginCli />}/> */}
+      <Route path="/" element={<LayoutCli><SessionManagerCli/><Home/></LayoutCli>} />
       <Route path="/verificaEmail" element={<Emailverify />}/>
       <Route path="/validaCodigo" element={<><Expiracontra /><ValidCode /></>}/>
       <Route path="/reset-password/:token" element={<CambioContra />}/>      

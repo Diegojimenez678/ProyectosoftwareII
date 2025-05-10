@@ -1,90 +1,108 @@
-main .mainhome{
-  background: rgba(255, 255, 255, 0.619);   
-  margin: 0rem 2rem; 
-
+main .mainhome {
+  background: rgba(255, 255, 255, 0.85); /* Fondo blanco más sólido con ligera transparencia */
+  margin: 2rem; /* Aumenta el margen general */
+  border-radius: 1rem; /* Añade un borde redondeado al contenedor principal */
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1); /* Ligera sombra para destacar */
+  padding: 2rem; /* Añade un padding interior */
 }
 
-.h2home{
-  color: #000000;
+.h2home {
+  color: #333; /* Texto del título más oscuro */
+  text-align: center; /* Centra el título principal */
+  margin-bottom: 2rem; /* Añade espacio debajo del título principal */
+  font-size: 2rem; /* Título principal más grande */
+  font-weight: bold;
 }
 
 .containerhome {
   display: flex;
   justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;  
+  align-items: flex-start; /* Alinea los items al inicio para un diseño más limpio */
+  flex-wrap: wrap;
   padding-bottom: 4rem;
+  gap: 2rem; /* Añade espacio entre las tarjetas */
 }
 
 .header-conte {
   display: flex;
   justify-content: space-between;
+  align-items: center; /* Centra verticalmente los elementos del header */
   flex-wrap: wrap;
   padding: 2rem;
+  margin-bottom: 2rem; /* Añade espacio debajo del header */
+  background-color: #f8f9fa; /* Fondo ligero para el header */
+  border-radius: 0.75rem;
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.05);
 }
 
 @media (max-width: 550px) {
   .header-conte {
-    justify-content: center;
+      justify-content: center;
+      flex-direction: column; /* Apila los elementos en pantallas pequeñas */
+      align-items: center;
   }
 
   .header-conte > * {
-    margin: 0.5rem; 
+      margin: 0.75rem; /* Aumenta el margen en pantallas pequeñas apiladas */
   }
-  .title-conte{
-    padding-left: 5rem;
-    color: #000;
-    padding-right: 5rem;
+
+  .title-conte {
+      padding-left: 1rem; /* Reduce el padding en pantallas pequeñas */
+      padding-right: 1rem;
+      color: #333; /* Texto más oscuro */
+      font-size: 1.5rem; /* Reduce el tamaño del título en pantallas pequeñas */
   }
 }
-
 
 @media (max-width: 360px) {
   .header-conte {
-    justify-content: center;
+      padding: 1rem;
   }
 
   .header-conte > * {
-    margin: 0.5rem; 
-  }  
+      margin: 0.5rem;
+  }
 
-  .title-conte{
-    font-size: 1.8rem;
+  .title-conte {
+      font-size: 1.3rem; /* Reduce aún más el tamaño del título en pantallas muy pequeñas */
   }
 }
 
-
-.card {  
-  margin: 5rem; 
-  border-radius: 1rem;
-  box-shadow: 1rem 1.25rem 1.5rem rgba(0, 0, 0, 0.675);
+.card {
+  margin: 2rem; /* Reduce el margen de las tarjetas */
+  border-radius: 0.75rem; /* Bordes más suaves */
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); /* Sombra más suave pero presente */
   overflow: hidden;
-  transition: transform 0.3s ease;  
-  max-width: 25%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición también para la sombra */
+  max-width: 300px; /* Establece un ancho máximo fijo para las tarjetas */
+  flex-basis: calc(30% - 4rem); /* Ajusta el ancho base */
+  background-color: #fff; /* Fondo blanco para las tarjetas */
+  border: 1px solid #eee; /* Borde sutil */
 }
 
 .card:hover {
-  transform: translateY(-0.625rem);
+  transform: translateY(-0.5rem);
+  box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.2); /* Sombra más pronunciada al pasar el ratón */
 }
 
-@media (max-width: 768px) { 
+@media (max-width: 768px) {
   .card {
-    flex-basis: calc(30% - 2rem);
-    max-width: calc(30% - 2rem);
-  }
-}
-@media (max-width: 676px) { 
-  .card {
-    flex-basis: calc(30% - 2rem); 
-    max-width: calc(30% - 2rem); 
+      flex-basis: calc(50% - 2rem); /* Dos tarjetas por fila en tabletas */
+      max-width: calc(50% - 2rem);
   }
 }
 
-
-@media (max-width: 500px) { 
+@media (max-width: 676px) {
   .card {
-    flex-basis: calc(80% - 2rem); 
-    max-width: calc(80% - 2rem); 
+      flex-basis: calc(50% - 2rem); /* Mantiene dos tarjetas por fila */
+      max-width: calc(50% - 2rem);
+  }
+}
+
+@media (max-width: 500px) {
+  .card {
+      flex-basis: calc(90% - 2rem); /* Una tarjeta por fila en móviles */
+      max-width: calc(90% - 2rem);
   }
 }
 
@@ -93,26 +111,33 @@ main .mainhome{
   height: auto;
   object-fit: cover;
   max-width: 100%;
+  border-top-left-radius: 0.75rem; /* Redondea las esquinas superiores */
+  border-top-right-radius: 0.75rem;
 }
 
-
-.title-conte{  
-  padding-top: 2rem;
+.title-conte {
+  padding-top: 1.5rem; /* Reduce un poco el padding superior */
   text-align: center;
-  color: #000000;
+  color: #333; /* Texto más oscuro */
+  font-size: 1.75rem; /* Tamaño de fuente un poco más grande */
+  font-weight: bold; /* Añade negrita al título de la sección */
 }
+
 .content {
-  padding: 1rem;
+  padding: 1.5rem; /* Aumenta el padding del contenido */
+  background-color: #fff; /* Asegura un fondo blanco para el contenido */
+  border-bottom-left-radius: 0.75rem; /* Redondea las esquinas inferiores */
+  border-bottom-right-radius: 0.75rem;
 }
 
 .content h2 {
-  margin-bottom: 0.5rem; 
-  font-size: 1.3rem; 
+  margin-bottom: 0.75rem;
+  font-size: 1.5rem; /* Título de la tarjeta un poco más grande */
+  color: #222; /* Color más oscuro */
 }
 
 .content p {
-  font-size: 1rem;
-  color: #000000;
+  font-size: 1.1rem; /* Texto del párrafo un poco más grande */
+  color: #555; /* Color del texto más suave */
+  line-height: 1.6; /* Mejora la legibilidad */
 }
-
-

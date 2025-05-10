@@ -1,74 +1,104 @@
-
-
 .sesion {
-    height: 100vh;        
+    height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: center;    
+    align-items: center;
+    background-color: #f0f2f5; /* Un fondo gris claro suave */
 }
 
-
 .login-container {
-    width: 100%;    
-    margin: 3rem;
-    padding: 2rem;
-    border: 0.1rem solid #ccc;
+    width: 90%; /* Aumenta el ancho inicial en pantallas pequeñas */
+    max-width: 400px; /* Limita el ancho máximo para que no se vea demasiado grande en escritorios */
+    margin: 2rem;
+    padding: 3rem; /* Aumenta el padding interior */
+    border: none; /* Elimina el borde gris */
     border-radius: 1rem;
-    background-color: #f9f9f900;
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    background-color: #fff; /* Fondo blanco sólido */
+    box-shadow: 0 0.8rem 1.5rem rgba(0, 0, 0, 0.15); /* Sombra más pronunciada */
     box-sizing: border-box;
 }
 
-
-
-.login-title{
-    color: #000000;
+.login-title {
+    color: #333; /* Texto del título más oscuro */
     justify-content: center;
     display: flex;
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem; /* Mayor espacio debajo del título */
+    font-size: 2rem; /* Título más grande */
+    font-weight: bold;
 }
 
-.input-label{
+.input-label {
     font-weight: bold;
-    font-size: 1.1rem;
+    font-size: 1rem; /* Reduce ligeramente el tamaño de la etiqueta */
+    color: #555; /* Color de etiqueta más suave */
+    display: block; /* Asegura que la etiqueta ocupe una línea completa */
+    margin-bottom: 0.5rem; /* Espacio entre etiqueta e input */
 }
 
 .input-field {
     width: 100%;
-    padding: 1rem;
-    margin-bottom: 1rem;
-    border: 0.1rem solid #ccc;
+    padding: 1.2rem; /* Aumenta el padding del input */
+    margin-bottom: 1.5rem; /* Mayor espacio entre inputs */
+    border: 0.1rem solid #ddd; /* Borde más claro */
     border-radius: 0.5rem;
     box-sizing: border-box;
+    font-size: 1rem;
 }
 
+.input-field:focus {
+    outline: none; /* Elimina el outline predeterminado al enfocar */
+    border-color: #007bff; /* Cambia el color del borde al enfocar */
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); /* Añade una sombra suave al enfocar */
+}
 
 .login-button {
     width: 100%;
-    margin-top: 1rem;
-    padding: 1rem;
-    background-color: #000000;
+    margin-top: 2rem; /* Mayor espacio encima del botón */
+    padding: 1.2rem; /* Aumenta el padding del botón */
+    background-color: #007bff; /* Un azul más llamativo */
     color: #fff;
     border: none;
     border-radius: 0.5rem;
     cursor: pointer;
-    font-size: 1.3rem;
+    font-size: 1.1rem; /* Reduce ligeramente el tamaño del texto del botón */
+    font-weight: bold;
     transition: background-color 0.3s ease;
+    box-shadow: 0 0.2rem 0.5rem rgba(0, 123, 255, 0.2); /* Ligera sombra en el botón */
 }
 
 .login-button:hover {
-    background-color: #101010;
+    background-color: #0056b3; /* Un tono de azul más oscuro al pasar el ratón */
 }
 
+.forgot-password {
+    display: block; /* Hace que el enlace ocupe una línea completa */
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+.error-message {
+    color: #dc3545; /* Rojo para indicar error */
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 0.9rem;
+}
 
 @media (min-width: 768px) {
     .login-container {
-        max-width: 40rem; 
+        max-width: 400px; /* Mantiene el ancho máximo en tabletas y escritorios */
+        margin: 3rem; /* Aumenta el margen en pantallas más grandes */
     }
 }
 
 @media (min-width: 992px) {
     .login-container {
-        max-width: 50rem; 
+        max-width: 450px; /* Ligero aumento del ancho máximo en escritorios grandes */
     }
 }
