@@ -1,11 +1,10 @@
-from config.database import Base
-from sqlalchemy import Column,Integer,String,Float,DateTime
-from sqlalchemy.orm import relationship
+from pydantic import BaseModel
+from datetime import datetime
+from typing import Optional
 
-class Resetpassword(Base):
-    __tablename__="resetpassword"
 
-    res_id = Column(Integer, primary_key = True)
-    res_correo=Column(String(80))
-    res_code=Column(String(6))
-    res_expiration= Column((DateTime))
+class Resetpassword(BaseModel):
+        res_id: Optional[int]=None
+        res_correo:str        
+        res_code:str
+        res_expiration: datetime

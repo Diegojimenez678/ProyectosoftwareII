@@ -187,22 +187,38 @@ class UserService():
 
     def valid_code(self, code: str):
         try:
-            reset_entry = self.db.query(ResetpasswordModule).filter(ResetpasswordModule.res_code == code).first()
+            print("🔍 Buscando código:", code)
+            reset_entry = (
+                self.db.query(
+                    ResetpasswordModule.res_correo,
+                    ResetpasswordModule.res_expiration
+                )
+                .filter(ResetpasswordModule.res_code == code)
+                .first()
+            )
+
             if not reset_entry:
+                print("❌ Código no encontrado")
                 raise ValueError("Código de verificación no encontrado")
-            
+
             current_time = datetime.utcnow()
-            if reset_entry.res_expiration > current_time:
+            print("🕒 Fecha actual:", current_time)
+            print("📆 Expira:", reset_entry.res_expiration)
+
+            if reset_entry.res_expiration < current_time:
+                print("⚠️ Código expirado")
                 raise ValueError("El código de verificación ha expirado")
 
             token_data = {"sub": reset_entry.res_correo}
             token = create_token(token_data)
+            print("✅ Token creado:", token)
             return token
+
         except Exception as e:
+            print("🔥 Error interno:", str(e))
             self.db.rollback()
             raise HTTPException(status_code=500, detail=str(e))
-        finally:
-            self.db.close()
+
 
     def reset_password_with_token(self, token: str, new_password: str):
         try:
@@ -239,5 +255,4 @@ class UserService():
         except Exception as e:
             self.db.rollback()
             raise HTTPException(status_code=500, detail=str(e))
-        finally:
-            self.db.close()     
+        
